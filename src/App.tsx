@@ -1,29 +1,37 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import logo from '@app/assets/logo.svg';
+import styles from './App.module.css';
 
 export function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <header className={styles.header}>
+        <img src={logo} alt="Todo logo" />
+      </header>
+      <main className={styles.main}>
+        <form className={styles.todoForm}>
+          <input type="text" placeholder="Adicione uma nova tarefa" />
+          <button>+</button>
+        </form>
+        <div className={styles.todoHeader}>
+          <div>
+            Tarefas criadas <span>0</span>
+          </div>
+          <div>
+            Concluídas <span>0</span>
+          </div>
+        </div>
+        <div className={styles.todoList}>
+          {[1, 2, 3, 4, 5].map((value) => (
+            <div className={styles.todoItem} key={value}>
+              <div className={styles.todoControl}>
+                <input id={String(value)} type="checkbox" />
+                <label htmlFor={String(value)}>Lorem ipsum dolor sit amet.</label>
+              </div>
+              <button>-</button>
+            </div>
+          ))}
+        </div>
+      </main>
     </>
   );
 }
