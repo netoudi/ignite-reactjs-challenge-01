@@ -3,18 +3,39 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-400);
   font-family: Inter, sans-serif;
   font-size: 1rem;
   color: var(--primary-dark);
   margin-top: 2rem;
 }
 
+.todoHeader .created,
+.todoHeader .finished {
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.todoHeader .created {
+  color: var(--primary);
+}
+
+.todoHeader .finished {
+  color: var(--secondary);
+}
+
 .todoHeader span {
   font-family: Inter, sans-serif;
   font-size: 0.75rem;
-  background: var(--gray-700);
-  color: var(--gray-100);
-  border-radius: 8px;
-  padding: 0 0.5rem;
+  font-weight: bold;
+  background: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 16px;
+  padding: 0.25rem 0.5rem;
 }

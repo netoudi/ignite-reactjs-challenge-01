@@ -8,10 +8,10 @@ export interface SummaryProps {
 export function Summary({ totalTasks, completedTasks }: SummaryProps) {
   return (
     <div className={styles.todoHeader}>
-      <div>
+      <div className={styles.created}>
         Tarefas criadas <span>{totalTasks}</span>
       </div>
-      <div>
+      <div className={styles.finished}>
         Concluídas
         <span>{completedTasks === 0 && totalTasks === 0 ? '0' : `${completedTasks} de ${totalTasks}`}</span>
       </div>
