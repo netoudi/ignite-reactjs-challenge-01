@@ -1,3 +1,4 @@
+import { Empty } from '@app/components/Empty';
 import { Task } from '@app/utils/models.ts';
 import styles from './TodoList.module.css';
 
@@ -8,6 +9,12 @@ export interface TodoListProps {
 }
 
 export function TodoList({ tasks, completeTask, deleteTask }: TodoListProps) {
+  if (tasks.length === 0) {
+    return (
+      <Empty title="Você ainda não tem tarefas cadastradas" description="Crie tarefas e organize seus itens a fazer" />
+    );
+  }
+
   return (
     <div className={styles.todoList}>
       {tasks.map((item) => (
