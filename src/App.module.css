@@ -4,14 +4,6 @@
   padding: 0 1rem;
 }
 
-.header {
-  background: var(--gray-700);
-  height: 12.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .todoForm {
   display: flex;
   flex-direction: row;
@@ -37,72 +29,4 @@
 
 .todoForm button:hover {
   background: var(--primary);
-}
-
-.todoList {
-  margin-top: 1rem;
-}
-
-.todoHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--gray-100);
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  color: var(--primary-dark);
-  margin-top: 2rem;
-}
-
-.todoHeader span {
-  font-family: Inter, sans-serif;
-  font-size: 0.75rem;
-  background: var(--gray-700);
-  color: var(--gray-100);
-  border-radius: 8px;
-  padding: 0 0.5rem;
-}
-
-.todoItem {
-  background: var(--gray-300);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.todoItem + .todoItem {
-  margin-top: 0.75rem;
-}
-
-.todoItem .todoControl {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.todoItem label {
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  color: var(--gray-700);
-}
-
-.todoItem input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
-}
-
-.todoItem button {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background: var(--primary-dark);
-  border: none;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
 }
