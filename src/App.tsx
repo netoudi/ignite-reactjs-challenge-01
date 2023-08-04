@@ -1,4 +1,5 @@
 import React from 'react';
+import { PlusCircle } from '@phosphor-icons/react';
 import { Header } from '@app/components/Header';
 import { Summary } from '@app/components/Summary';
 import { TodoList } from '@app/components/TodoList';
@@ -47,7 +48,9 @@ export function App() {
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.todoForm}>
           <input type="text" placeholder="Adicione uma nova tarefa" value={task} onChange={handleInput} />
-          <button type="submit">+</button>
+          <button type="submit">
+            Criar <PlusCircle size={18} />
+          </button>
         </form>
 
         <Summary totalTasks={totalTasks} completedTasks={completedTasks} />
