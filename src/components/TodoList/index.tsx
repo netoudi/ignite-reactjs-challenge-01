@@ -1,3 +1,4 @@
+import { Trash } from '@phosphor-icons/react';
 import { Empty } from '@app/components/Empty';
 import { Task } from '@app/utils/models.ts';
 import styles from './TodoList.module.css';
@@ -23,7 +24,11 @@ export function TodoList({ tasks, completeTask, deleteTask }: TodoListProps) {
             <input id={item.id} type="checkbox" onClick={() => completeTask(item.id)} />
             <label htmlFor={item.id}>{item.description}</label>
           </div>
-          <button onClick={() => deleteTask(item.id)}>-</button>
+          <div>
+            <button onClick={() => deleteTask(item.id)}>
+              <Trash size={16} />
+            </button>
+          </div>
         </div>
       ))}
     </div>
